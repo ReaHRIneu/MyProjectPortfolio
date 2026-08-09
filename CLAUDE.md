@@ -4,20 +4,10 @@
 - **Language**: Always respond and write code comments in Korean (한국어로 답변 및 주석 작성).
 - **Tone**: Professional, concise, and helpful (전문적이고 간결하며 친절한 어조).
 
-## 🚀 Build, Test, and Run Commands
-- **Install Dependencies**: `npm install` (또는 프로젝트에 맞는 명령어 입력)
-- **Run Application**: `npm start`
-- **Build Project**: `npm run build`
-- **Run Tests**: `npm test`
-
-## 🛠️ Code Style & Standards
-- Follow standard JavaScript/TypeScript style guidelines.
-- Use explicit type definitions instead of `any`.
-- Keep functions modular, small, and single-purpose.
-
-## 📝 Commit & Branch Strategy
-- **Commit Format**: Follow Conventional Commits (`feat: ...`, `fix: ...`).
-- **Branch Naming**: `feature/feature-name` or `bugfix/issue-name`.
+## 📝 커밋 규칙
+- **Commit Format**: Conventional Commits(`docs: ...`, `chore: ...` 등)를 따릅니다. 별도 브랜치 없이 `main`에 직접 커밋하는 방식으로 운영합니다.
+- **로컬 커밋**(git add/commit, push 이전)은 되돌리기 쉬운 저위험 작업이므로 사용자 확인 없이 바로 진행합니다.
+- **git push, force-push, 저장소 공개범위 변경** 등 외부에 영향을 주거나 되돌리기 어려운 작업은 사용자의 명시적 요청이 있을 때만 진행합니다.
 
 ## 📄 문서 형식 규칙
 
@@ -25,16 +15,28 @@
 - 발표/공유 등 목적으로 **별도 요청이 들어온 경우에만** [`templates/pptx-design-guide.md`](./templates/pptx-design-guide.md)에 정의된 디자인(블루퍼플 포인트 컬러, Pretendard 폰트, 슬라이드 구조)으로 `.pptx`를 제작합니다.
 - `.pptx`는 항상 원본 `.md` 문서를 바탕으로 만든 산출물로 취급하며, `.pptx` 자체가 원본이 되지 않도록 원본 `.md`는 계속 유지/갱신합니다.
 
+## 🔐 저장소 공개/보안 설정
+
+- 이 저장소는 **Public**으로 유지합니다. GitHub 무료 플랜에서는 Private 저장소에 브랜치 보호·Secret scanning을 적용할 수 없어(GitHub Pro 이상 필요) 두 보호 기능을 무료로 쓰기 위해 Public을 선택했습니다 (2026-08-10 결정).
+- `main` 브랜치: 강제 푸시(force-push)·삭제 차단 (최소 보호 — 혼자 작업하므로 PR 필수는 아님).
+- Secret scanning + push protection 활성화 — 커밋에 API 키 등 민감정보가 포함되면 GitHub가 감지/차단합니다.
+- Public 저장소이므로 `personal/` 등에 개인정보(연락처, 위치, 재무 정보 등 식별 가능한 민감 정보)는 넣지 않습니다.
+- Private 전환이 다시 요청되면, 브랜치 보호와 Secret scanning이 자동으로 비활성화된다는 점을 먼저 안내합니다.
+
 ## 🗓️ 작업 기록 (History)
 
 - 작업 세션에서 의미 있는 변경(문서 추가/수정, 기획, 세팅 등)을 진행하면 `history/<YYYY-MM>.md`에 기록을 남깁니다.
 - 해당 월 파일이 없으면 새로 만들고 `history/README.md` 목록에 추가합니다.
 - 형식: `## YYYY-MM-DD` 날짜 섹션 아래에 그날 진행한 작업을 불릿으로 요약합니다.
-- 게임 기획서(`projects/unity/*`, `templates/game-design/`) 작업 시에는 [`templates/game-design/README.md`](./templates/game-design/README.md)의 "제작 규칙"(단계 진행 조건, 버전/개정 이력, 커밋 연동, 새 프로젝트 생성 절차, 파일 생성 규칙)을 따릅니다.
+
+## 📚 폴더별 작성 규칙
+
+- 게임 기획서(`projects/unity/*`, `templates/game-design/`): [`templates/game-design/README.md`](./templates/game-design/README.md)의 "제작 규칙"(단계 진행 조건, 버전/개정 이력, 커밋 연동, 새 프로젝트 생성 절차, 파일 생성 규칙)을 따릅니다.
+- 타 게임 리뷰 분석(`library/타게임리뷰분석/`): 해당 폴더 [`README.md`](./library/타게임리뷰분석/README.md)의 작성 규칙(파일명, 메타 정보, 행사별 하위 폴더)을 따릅니다.
 
 ## 📁 저장소 구조
 
-이 저장소는 앱/서비스 코드가 아니라 **개인 종합 wiki**(순수 마크다운 폴더 구조)입니다. 위의 Build/Test 명령어(`npm install` 등)는 이 저장소 자체에는 해당하지 않는 범용 예시입니다.
+이 저장소는 앱/서비스 코드가 아니라 **개인 종합 wiki**(순수 마크다운 폴더 구조)입니다.
 
 ```
 projects/           # 프로젝트 포트폴리오 (완료/진행 중 프로젝트 소개)
