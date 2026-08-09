@@ -1,0 +1,16 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 에디터
+.vscode/
+.idea/
+*.swp
+
+# Obsidian으로 이 위키를 열 경우의 로컬 설정
+.obsidian/
+
+# 임시 파일
+*.tmp
+~$*
