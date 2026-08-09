@@ -29,6 +29,13 @@
 - 해당 월 파일이 없으면 새로 만들고 `history/README.md` 목록에 추가합니다.
 - 형식: `## YYYY-MM-DD` 날짜 섹션 아래에 그날 진행한 작업을 불릿으로 요약합니다.
 
+### 다음 세션 메모 (`history/next-session.md`)
+
+- 위 월별 기록과는 별개로, `history/next-session.md`는 **다음 세션 시작 시 참고할 임시 작업 메모**입니다.
+- 작업일 또는 작업 시간 종료 시점에 갱신합니다.
+- 월별 기록(`history/<YYYY-MM>.md`)처럼 누적(append)하지 않고, **매번 최신 상태로 덮어씁니다(overwrite)**.
+- 내용에는 마지막 세션 요약과 다음에 이어서 할 작업(미해결/확인 필요 사항 위주)만 간결하게 남깁니다.
+
 ## 📚 폴더별 작성 규칙
 
 - 게임 기획서(`projects/unity/*`, `templates/game-design/`): [`templates/game-design/README.md`](./templates/game-design/README.md)의 "제작 규칙"(단계 진행 조건, 버전/개정 이력, 커밋 연동, 새 프로젝트 생성 절차, 파일 생성 규칙)을 따릅니다.
