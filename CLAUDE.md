@@ -19,11 +19,18 @@
 - **Commit Format**: Follow Conventional Commits (`feat: ...`, `fix: ...`).
 - **Branch Naming**: `feature/feature-name` or `bugfix/issue-name`.
 
+## 📄 문서 형식 규칙
+
+- 모든 문서 파일은 기본적으로 **Markdown(`.md`)**으로 작성합니다.
+- 발표/공유 등 목적으로 **별도 요청이 들어온 경우에만** [`templates/pptx-design-guide.md`](./templates/pptx-design-guide.md)에 정의된 디자인(블루퍼플 포인트 컬러, Pretendard 폰트, 슬라이드 구조)으로 `.pptx`를 제작합니다.
+- `.pptx`는 항상 원본 `.md` 문서를 바탕으로 만든 산출물로 취급하며, `.pptx` 자체가 원본이 되지 않도록 원본 `.md`는 계속 유지/갱신합니다.
+
 ## 🗓️ 작업 기록 (History)
 
 - 작업 세션에서 의미 있는 변경(문서 추가/수정, 기획, 세팅 등)을 진행하면 `history/<YYYY-MM>.md`에 기록을 남깁니다.
 - 해당 월 파일이 없으면 새로 만들고 `history/README.md` 목록에 추가합니다.
 - 형식: `## YYYY-MM-DD` 날짜 섹션 아래에 그날 진행한 작업을 불릿으로 요약합니다.
+- 게임 기획서(`projects/unity/*`, `templates/game-design/`) 작업 시에는 [`templates/game-design/README.md`](./templates/game-design/README.md)의 "제작 규칙"(단계 진행 조건, 버전/개정 이력, 커밋 연동, 새 프로젝트 생성 절차, 파일 생성 규칙)을 따릅니다.
 
 ## 📁 저장소 구조
 
