@@ -8,4 +8,4 @@ Unity로 진행한 프로젝트의 기획 문서, 시스템 설계, 코드 스�
 
 | 프로젝트 | 설명 | 상태 |
 | --- | --- | --- |
-| _(아직 없음)_ | | |
+| [beat-puzzle-rpg](./beat-puzzle-rpg/01-concept.md) (가제) | 퍼즐×리듬×RPG 하이브리드 2D Android 게임 | 컨셉 단계 |
