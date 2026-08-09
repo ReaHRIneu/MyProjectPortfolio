@@ -9,4 +9,5 @@ Unity를 포함한 여러 프로젝트와 개인 노트를 정리하는 종합 w
   - [Unity / 게임 개발 프로젝트](./projects/unity/README.md)
 - [프로그래밍 노트 / TIL](./notes/README.md)
 - [개인 노트](./personal/README.md)
+- [라이브러리 (외부 참고자료)](./library/README.md)
 - [문서 템플릿](./templates/)

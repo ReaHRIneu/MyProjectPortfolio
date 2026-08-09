@@ -28,7 +28,8 @@ projects/           # 프로젝트 포트폴리오 (완료/진행 중 프로젝�
   unity/             # Unity/게임 개발 프로젝트 문서
 notes/              # 일반 프로그래밍 노트 / TIL
 personal/           # 기타 개인 노트
-templates/          # 새 문서 작성용 템플릿 (project-note.md, til.md)
+library/            # Notion 등 외부에서 가져온 참고자료 (평판 파일 나열)
+templates/          # 새 문서 작성용 템플릿 (project-note.md, til.md, game-design/)
 ```
 
 새 프로젝트/노트를 추가할 땐 위 폴더 중 성격에 맞는 곳에 넣고, 해당 폴더의 `README.md` 목록에 링크를 추가합니다.
