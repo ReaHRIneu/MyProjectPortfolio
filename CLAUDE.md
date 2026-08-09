@@ -19,6 +19,12 @@
 - **Commit Format**: Follow Conventional Commits (`feat: ...`, `fix: ...`).
 - **Branch Naming**: `feature/feature-name` or `bugfix/issue-name`.
 
+## 🗓️ 작업 기록 (History)
+
+- 작업 세션에서 의미 있는 변경(문서 추가/수정, 기획, 세팅 등)을 진행하면 `history/<YYYY-MM>.md`에 기록을 남깁니다.
+- 해당 월 파일이 없으면 새로 만들고 `history/README.md` 목록에 추가합니다.
+- 형식: `## YYYY-MM-DD` 날짜 섹션 아래에 그날 진행한 작업을 불릿으로 요약합니다.
+
 ## 📁 저장소 구조
 
 이 저장소는 앱/서비스 코드가 아니라 **개인 종합 wiki**(순수 마크다운 폴더 구조)입니다. 위의 Build/Test 명령어(`npm install` 등)는 이 저장소 자체에는 해당하지 않는 범용 예시입니다.
