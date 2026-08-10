@@ -12,6 +12,7 @@
 - (2026-08-11) `beat-puzzle-rpg/01-concept.md` v1.3 → v1.4: 테마를 추상적 미니멀 세계 → 현대 사회/일상적 감성으로 변경. 짧은 서사(하루 속 순간들: 출근길/회의실/퇴근길 지하철/혼자 보내는 밤) 도입
 - (2026-08-11) `references.md` v0.2 → v0.3: 기존 게임 시스템/메커니즘 리서치(9종)는 그대로 유지하고, 새로 "일상 감성 × 현대 사회 계열" 섹션을 분리 신설 — Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 등 Android 실사례 위주로 리서치(모바일 출시 여부 실제 검증 포함). `01-concept.md`도 v1.5로 이 검증된 리서치를 반영해 아트 레퍼런스 표 갱신.
 - (2026-08-11) `beat-puzzle-rpg/01-concept.md` v1.5 → **v1.6**: 아트 스타일을 **도트 그래픽(픽셀 아트)**으로 확정. Unpacking/Coffee Talk를 스타일 참고로 지정하고, 나머지는 색감/감정 매핑/조작감 등 부분 참고로 구분. **테마+아트 스타일 결정은 이제 완료된 상태.**
+- (2026-08-11) 문서 버전 표기 규칙을 `MAJOR.MINOR.PATCH`(예: v1.2.0) 3단계로 개정 — MAJOR=핵심 항목 완성 여부/정체성 변화, MINOR=구성(섹션) 변화, PATCH=문구만 수정. 저장소 전체(템플릿, CLAUDE.md, beat-puzzle-rpg 기존 문서)의 버전 표기를 소급 변환함. `beat-puzzle-rpg/01-concept.md`는 v1.6.1, `references.md`는 v0.3.1이 됨.
 
 ## 다음에 이어서 할 일
 

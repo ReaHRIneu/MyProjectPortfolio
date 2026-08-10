@@ -1,7 +1,7 @@
 # 레퍼런스 리서치
 
 - **작성일**: 2026-08-10
-- **버전**: v0.3
+- **버전**: v0.3.1
 - **연관 문서**: [01-concept.md](./01-concept.md)
 - **참고**: 여기 정리한 게임들은 직접 플레이가 아닌 웹 리서치 기반 자료입니다. 직접 플레이한 타 게임 리뷰는 [`library/타게임리뷰분석/`](../../../library/타게임리뷰분석/)에 별도로 기록합니다.
 
@@ -249,6 +249,7 @@
 
 | 버전 | 날짜 | 변경 내용 |
 | --- | --- | --- |
-| v0.1 | 2026-08-10 | 최초 작성 — Lumines/Tetris Effect/Thumper/Crypt of the NecroDancer 리서치 |
-| v0.2 | 2026-08-10 | 유사 게임 목록 요약표 추가, QQQbeats!!!/Muse Dash/Cadence of Hyrule/Theatrhythm Final Fantasy/Patapon 리서치 및 적용점 보강 |
-| v0.3 | 2026-08-11 | 테마 전환(현대 사회·일상적 감성) 대응 — "일상 감성 × 현대 사회 계열" 섹션 추가. Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 리서치, A Short Hike·Chicory·Alba 등 Android 미출시/톤 부적합 사례 확인 및 배제, 공통 패턴·적용점 보강 |
+| v0.1.0 | 2026-08-10 | 최초 작성 — Lumines/Tetris Effect/Thumper/Crypt of the NecroDancer 리서치 |
+| v0.2.0 | 2026-08-10 | 유사 게임 목록 요약표 추가, QQQbeats!!!/Muse Dash/Cadence of Hyrule/Theatrhythm Final Fantasy/Patapon 리서치 및 적용점 보강 |
+| v0.3.0 | 2026-08-11 | 테마 전환(현대 사회·일상적 감성) 대응 — "일상 감성 × 현대 사회 계열" 섹션 추가. Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 리서치, A Short Hike·Chicory·Alba 등 Android 미출시/톤 부적합 사례 확인 및 배제, 공통 패턴·적용점 보강 |
+| v0.3.1 | 2026-08-11 | 버전 표기를 MAJOR.MINOR.PATCH 3단계 형식으로 전환 (과거 버전 표기 전체 소급 변환, 내용 변경 없음) |

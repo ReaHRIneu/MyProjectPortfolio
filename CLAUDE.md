@@ -14,6 +14,7 @@
 - 모든 문서 파일은 기본적으로 **Markdown(`.md`)**으로 작성합니다.
 - 발표/공유 등 목적으로 **별도 요청이 들어온 경우에만** [`templates/pptx-design-guide.md`](./templates/pptx-design-guide.md)에 정의된 디자인(블루퍼플 포인트 컬러, Pretendard 폰트, 슬라이드 구조)으로 `.pptx`를 제작합니다.
 - `.pptx`는 항상 원본 `.md` 문서를 바탕으로 만든 산출물로 취급하며, `.pptx` 자체가 원본이 되지 않도록 원본 `.md`는 계속 유지/갱신합니다.
+- **버전을 표기하는 문서**는 `MAJOR.MINOR.PATCH`(예: `v1.2.0`) 형식으로 세부 관리합니다. 각 자리의 의미는 문서 종류별 규칙 문서에서 정의합니다(게임 기획서는 [`templates/game-design/README.md`](./templates/game-design/README.md) 2번 참고).
 
 ## 🔐 저장소 공개/보안 설정
 
