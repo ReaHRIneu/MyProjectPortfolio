@@ -1,7 +1,7 @@
 # 레퍼런스 리서치
 
 - **작성일**: 2026-08-10
-- **버전**: v0.2
+- **버전**: v0.3
 - **연관 문서**: [01-concept.md](./01-concept.md)
 - **참고**: 여기 정리한 게임들은 직접 플레이가 아닌 웹 리서치 기반 자료입니다. 직접 플레이한 타 게임 리뷰는 [`library/타게임리뷰분석/`](../../../library/타게임리뷰분석/)에 별도로 기록합니다.
 
@@ -82,6 +82,106 @@
 - **성장 시스템**: 병과(창병/궁병/기병 등)를 해금하고 전투 상황에 맞게 배치하는 전략적 성장
 - **참고할 점**: "정확한 박자 입력 연속 성공 → 전체 효율 상승(피버)"이라는 구조가 beat-puzzle-rpg의 콤보 시스템에 직접 적용 가능한 형태 — 일정 콤보 이상 유지 시 짧은 시간 동안 성장 재화 획득량을 배로 늘리는 피버 타임 도입을 검토할 만함
 
+## 일상 감성 × 현대 사회 계열 (테마 전환 대응 리서치)
+
+> 2026-08-11 테마 전환(추상적 미니멀 SF → 현대 사회·일상적 감성) 이후, 위 퍼즐×리듬×RPG 계열 게임들은 **메커니즘 참고용**으로 유지하고, 이 절에서는 **아트/톤/서사 전달 방식 참고용**으로 별도 조사했다. 모바일(Android) 실사례와 "퍼즐 메커니즘×감정 서사" 결합 사례를 우선했다.
+
+### 요약
+
+| 게임 | Android 출시 여부 | 퍼즐×감정 결합 정도 | beat-puzzle-rpg와 가장 가까운 지점 |
+| --- | --- | --- | --- |
+| Florence (Mountains, 2018) | O (2018-03-14) | 매우 높음 — 퍼즐 난이도 자체가 감정 상태의 은유 | "퍼즐=감정 정리" 컨셉의 직접적 선례 |
+| Old Man's Journey (Broken Rules, 2017) | O | 중간 — 대사 없는 회상+환경 퍼즐 | 모바일 터치 네이티브 조작 + 무대사 정서 전달 |
+| Unpacking (Witch Beam, 2021 / 모바일 2023) | O (2023-08-24) | 중간 — 오브젝트 배치로 인생 챕터 암시 | 대사 없이 소품/색으로 장면(하루 속 순간) 암시 |
+| Coffee Talk (Toge Productions, 2020 / 모바일 2026) | O (2026-03-20) | 낮음~중간 — 음료 제조가 대화 분기에 영향 | 판타지 표면 아래 현실적 현대 고민을 다루는 방식 |
+| TOEM (Something We Made, 2021 / 모바일 Snapbreak 포트) | O (Google Play 확인) | 낮음 — 사진 찍기가 공감의 매개 | 흑백/미니멀 컬러로도 온기 전달 가능함을 보여주는 반례 |
+| Behind the Frame: The Finest Scenery (Silver Lining Studio, 2021) | O (Crunchyroll 앱 경유) | 매우 높음 — 그림 퍼즐 완성=기억 회복 | Florence와 함께 "퍼즐 완성=감정 회복" 메타포의 핵심 선례 |
+| A Short Hike (Adam Robinson-Yu, 2019) | **X (모바일 미출시, 확인 필요 아님 — 공식 미출시 확정)** | 낮음 | 파스텔 힐링 무드만 참고, 모바일 사례로는 인용 부적절 |
+| Chicory: A Colorful Tale (Greg Lobanov, 2021) | **X (모바일 미출시)** | 높음이나 우울/불안 등 헤비 톤 | 톤이 무거워 이번 기준(캐주얼~미드코어)에서 제외 |
+| Alba: A Wildlife Adventure (ustwo games, 2020) | **X (Apple Arcade iOS 전용, Android 정식 출시 미확인)** | 낮음 | Android 타겟에 부적합, 참고만 |
+| A Little to the Left (Secret Mode, 2022 / 모바일 2024) | O (2024-11-28) | 낮음(스토리 거의 없음, 순수 정리 퍼즐) | 아늑한 톤+터치 정리 퍼즐의 보조 참고 사례 |
+
+### Florence (Mountains, 2018)
+
+- **배경/설정**: 25세 여성 Florence Yeoh의 현대 도시 일상. 무기력한 반복 업무 속에서 공원에서 첼리스트 Krish를 만나 연애가 시작되고, 갈등을 거쳐 결별하는 과정을 20개 챕터·약 30분 분량으로 그린다.
+- **비주얼 스타일**: 손그림 만화책(코믹북) 스타일의 컷/프레임 구조. 장면의 감정에 따라 컬러 팔레트가 바뀐다(설렘=밝고 선명한 색, 갈등=탁하고 어두운 색).
+- **감정/서사 전달 방식**: 텍스트 대사가 거의 없이 미니게임(퍼즐)만으로 진행. 대표적으로 "대화 퍼즐"에서 관계가 편해질수록 조각 수가 줄어 퍼즐이 쉬워지고, 다툼이 심해지면 조각이 늘고 서로 안 맞아 어긋난다. 첼로(Krish)와 피아노(Florence) 라이트모티프로 인물을 음악적으로 구분.
+- **참고할 점**: "퍼즐 난이도 = 감정 상태"를 직접 매핑하는 방식은 beat-puzzle-rpg의 "비트에 맞춰 퍼즐을 배치 = 그 순간의 감정을 정리"라는 컨셉과 가장 근접한 선행 사례. 스테이지(하루의 장면)별로 판정 난이도·패턴을 그 장면의 감정(설렘=쉽고 유려한 배치, 피로=복잡하고 불규칙한 배치, 안도=클리어 후 자연스럽게 정렬)에 맞춰 디자인하는 구체적 근거로 인용 가능.
+- **출처**: [Florence (video game) - Wikipedia](https://en.wikipedia.org/wiki/Florence_(video_game)) · [Review: Florence – Destructoid](https://www.destructoid.com/reviews/review-florence/) · [Florence - App Store](https://apps.apple.com/us/app/florence/id1297430468)
+
+### Old Man's Journey (Broken Rules, 2017)
+
+- **배경/설정**: 노인이 한 통의 편지를 받은 뒤 여정을 떠나고, 이동 중 짧은 회상으로 그의 인생(가족과의 갈등과 화해)이 드러난다.
+- **비주얼 스타일**: 손그림 수채화풍의 다채로운 풍경, 파스텔 톤. 시간대·계절에 따라 배경 색이 변화.
+- **감정/서사 전달 방식**: 대사를 완전히 배제하고(dialogue-free), 짧은 단일 컷 애니메이션(예: 빗속에서 집을 바라보는 남자)과 지형 조작만으로 정서를 전달. 회상 장면이 노인의 인생사를 서정적으로 암시.
+- **게임플레이**: 언덕 지형을 드래그해 높낮이를 조절하여 캐릭터가 걷고 오를 길을 만드는 환경 퍼즐. 모바일 터치에 최적화된 실제 사례.
+- **참고할 점**: 터치 한 번으로 지형/환경을 조작하는 모바일 네이티브 조작감과, 대사 없이 애니메이션+음악만으로 감정을 전달하는 방식을 참고. beat-puzzle-rpg의 짧은 장면(하루 속 순간) 구성에도 대사 대신 비주얼+음악만으로 정서를 전달하는 원칙을 강화하는 근거가 됨.
+- **출처**: [Old Man's Journey - Wikipedia](https://en.wikipedia.org/wiki/Old_Man%27s_Journey) · [공식 사이트](http://www.oldmansjourney.com/) · [Google Play](https://play.google.com/store/apps/details?id=es.brokenrul.oldmansjourney&hl=en_IN)
+
+### Unpacking (Witch Beam, 2021 / 모바일 포트 2023)
+
+- **배경/설정**: 1997~2018년까지, 한 여성의 인생을 8번의 이사(연도별 단계)로 그린다. 총 35개 방을 배경으로 상자를 풀어 방을 채우는 행위 자체가 인생의 챕터가 된다.
+- **비주얼 스타일**: 순수 픽셀아트, 차분하고 미니멀한 톤. IGDA 어워드 "2D Animation"·"2D Environment Art" 부문 수상.
+- **감정/서사 전달 방식**: 대사가 전혀 없는(wordless) 경험. 졸업장, 이혼 후 사라진 물건, 새로운 반려동물 등 배치되는 오브젝트 자체가 인물의 삶과 관계 변화를 암시하는 "오브젝트 스토리텔링".
+- **게임플레이**: 상자 속 물건을 꺼내 방에 배치하는 퍼즐. 일부는 정해진 자리가 있고 일부는 자유 배치.
+- **모바일**: 2023년 8월 24일 iOS/Android 동시 출시, $10 프리미엄.
+- **참고할 점**: 대사 없이 "오브젝트/공간 배치"만으로 인생의 한 챕터를 전달하는 방식이 beat-puzzle-rpg가 스테이지(출근길/회의실 등)마다 텍스트 없이 배경 소품·컬러만으로 상황을 암시하는 데 실질적으로 참고됨. 드래그 배치 조작이 iOS/Android 양쪽에서 잘 작동한 사례이기도 함.
+- **출처**: [Unpacking (video game) - Wikipedia](https://en.wikipedia.org/wiki/Unpacking_(video_game)) · [Engadget: 모바일 출시 발표](https://www.engadget.com/zen-moving-game-unpacking-comes-to-android-and-ios-on-august-24th-214513079.html) · [TouchArcade](https://toucharcade.com/2023/08/01/unpacking-iphone-ipad-android-release-date/) · [Pocket Gamer](https://www.pocketgamer.com/unpacking/out-now/)
+
+### Coffee Talk (Toge Productions, 2020 / 모바일 2026-03-20)
+
+- **배경/설정**: 현대(2020년대) 시애틀을 무대로 한 "얼터너티브 현실"(엘프·오크·인어 등 판타지 종족이 인간과 함께 사는 도시)이지만, 다루는 갈등은 이민, 커리어 고민, 인간관계, 자기정체성 등 매우 현실적인 현대 사회 이슈. 심야 카페에서 손님들의 사연을 듣는 구조.
+- **비주얼 스타일**: 1990년대 아니메(카우보이 비밥, 공각기동대)·PC-98 비주얼노벨 감성의 도트그래픽. 아늑한 분위기를 위한 갈색(브라운) 계열 팔레트. 로파이 칠합 OST.
+- **감정/서사 전달 방식**: 대화(텍스트) 중심의 비주얼노벨. 음료 제조가 단순 장식이 아니라 대화의 분기·결과에 실제로 영향을 주는 경량 퍼즐(레시피 조합)로 기능 — "행위(만들기)가 감정적 결과에 영향"을 주는 구조.
+- **참고할 점**: 판타지 껍데기를 쓰고 있지만 실질적으로 "현대 사회의 소소한 고민"을 다루는 방식(설정은 비틀되 감정은 현실적)과, 대화 사이에 넣는 가벼운 행위형 미니게임이 서사에 영향을 주는 설계. 밤/도시 분위기를 색감으로 압축한 브라운 팔레트 활용법을 참고할 만함.
+- **출처**: [Coffee Talk (video game) - Wikipedia](https://en.wikipedia.org/wiki/Coffee_Talk_(video_game)) · [DroidGamers](https://www.droidgamers.com/news/coffee-talk-episode-1/) · [Prism News: 모바일 출시](https://www.prismnews.com/hobbies/mobile-gaming/coffee-talk-arrives-on-ios-and-android-bringing-cozy-caf)
+
+### TOEM (Something We Made, 2021 / 모바일 Snapbreak 포트)
+
+- **배경/설정**: 스칸디나비아풍 도시·마을들을 여행하며 "토엠"이라는 자연 현상을 보러 산에 오르는 사진작가 청년의 여정. 마을 주민들의 소소한 부탁을 들어주는 옴니버스식 구성.
+- **비주얼 스타일**: 흑백 손그림, 팝업북/종이공예에서 영감받은 입체감 있는 2D+3D 혼합 스타일.
+- **감정/서사 전달 방식**: 텍스트(말풍선·편지)로 짧은 대화를 전달하되, 핵심은 NPC의 사소한 부탁을 사진으로 해결하는 행위 — "사진 찍기"가 관찰과 공감의 매개가 됨.
+- **모바일**: Snapbreak Games를 통해 iOS/Android로 출시(Google Play `com.snapbreak.toem`), 데모 무료+약 $7.99 언락 방식. **주의**: 영문 Wikipedia 문서에는 이 모바일 포트가 아직 반영되지 않아 "모바일 미출시"로 오기되어 있음 — Google Play 스토어 리스팅과 Games Press 보도로 실제 출시를 별도 확인함.
+- **참고할 점**: 흑백+최소한의 포인트 컬러로도 "따뜻함"을 전달할 수 있음을 보여주는 역발상 사례 — beat-puzzle-rpg의 미니멀리즘 원칙(Thumper, 기존 종합 3번)과 결합 가능. 옴니버스식 소소한 에피소드 구성은 "하루 속 순간들" 스테이지 구성과 구조적으로 유사.
+- **출처**: [TOEM - Wikipedia](https://en.wikipedia.org/wiki/TOEM) (모바일 정보 누락 주의) · [TOEM - Google Play](https://play.google.com/store/apps/details?id=com.snapbreak.toem) · [Games Press 보도](https://www.gamespress.com/TOEM-A-Photo-Adventure-Now-Available-on-iOS-Android) · [Existential Magazine 리뷰](https://www.existentialmagazine.net/entertainment/review-toem)
+
+### Behind the Frame: The Finest Scenery (Silver Lining Studio, 2021)
+
+- **배경/설정**: 현대 대도시(뉴욕 갤러리 공모)를 배경으로, 갤러리 출품을 앞둔 화가가 마지막 그림을 완성하는 과정에서 자신의 기억(관계, 상실)을 마주하는 이야기.
+- **비주얼 스타일**: 여러 리뷰어가 "지브리풍"으로 묘사하는 수채화/색연필 톤의 따뜻한 그림체.
+- **감정/서사 전달 방식**: 대사는 있지만 핵심은 "그림 퍼즐" 자체다. 방탈출형 오브젝트 찾기 + 색칠북 방식의 그림 완성 퍼즐을 풀 때마다 과거 장면이 하나씩 드러난다 — 퍼즐 완성이 곧 기억 회복이라는 은유 구조.
+- **모바일**: Crunchyroll Game Vault 앱을 통해 iOS/Android 제공(Crunchyroll 구독 필요) — Google Play에 "Crunchyroll: Behind the Frame" 리스팅으로 확인.
+- **참고할 점**: "퍼즐을 완성하는 행위 = 기억/감정을 되찾는 행위"라는 은유 구조가 Florence와 함께 beat-puzzle-rpg의 핵심 컨셉("비트에 맞춰 퍼즐을 배치 = 그 순간의 감정을 정리")에 직접 대응하는 강력한 선례. 다만 이 게임은 후반에 무거운 반전 서사가 있어, 이번 기획의 "잔잔한 일상 감성" 기준에는 **톤 자체보다 "퍼즐=감정 회복" 메타포 구조만** 선별적으로 참고할 것.
+- **출처**: [Behind the Frame: The Finest Scenery - Wikipedia](https://en.wikipedia.org/wiki/Behind_the_Frame:_The_Finest_Scenery) · [Silver Lining Studio 공식 사이트](https://silverliningstudio.co/Behindtheframe/) · [Crunchyroll 앱 - Google Play](https://play.google.com/store/apps/details?id=com.crunchyroll.gv.btf&hl=en_US) · [NYX Game Awards](https://nyxgameawards.com/winner-info.php?id=389)
+
+### 참고만 하고 사례로는 배제한 후보 (확인 필요 표시 포함)
+
+- **A Short Hike** (Adam Robinson-Yu, 2019): Windows/macOS/Linux/Switch/PS4/Xbox에만 출시, **Android 출시 없음(확인함)**. 파스텔톤의 산·바다 색감과 단순한 도형 캐릭터로 표현되는 편안한 일상 무드는 여전히 유효한 아트 레퍼런스지만, "모바일 실사례"로 인용하는 것은 부정확하므로 01-concept.md에서도 "무드 레퍼런스 한정, 모바일 미출시" 단서가 필요함. 출처: [A Short Hike - Wikipedia](https://en.wikipedia.org/wiki/A_Short_Hike)
+- **Chicory: A Colorful Tale** (Greg Lobanov, 2021): PC/콘솔에만 출시, **Android 출시 없음(확인함)**. 색칠 퍼즐과 정서 결합도는 매우 높지만, 우울증·자기혐의 등 상당히 무거운 정신건강 서사를 정면으로 다뤄 이번 기획의 "캐주얼~미드코어, 잔잔한 감성" 기준에서는 제외 대상. 출처: [Chicory: A Colorful Tale - Wikipedia](https://en.wikipedia.org/wiki/Chicory:_A_Colorful_Tale)
+- **Alba: A Wildlife Adventure** (ustwo games, 2020): Apple Arcade(iOS) 전용으로 출시, **Android 정식 출시는 확인되지 않음**(공식 출시 계획이 있었는지 여부도 검색 범위에서 확인 안 됨 — 확인 필요). Android 타겟인 beat-puzzle-rpg에는 참고 우선순위가 낮음. 출처: [Android Authority](https://www.androidauthority.com/ustwo-alba-a-wildlife-adventure-1139629/), [Alba: A Wildlife Adventure - Wikipedia](https://en.wikipedia.org/wiki/Alba:_A_Wildlife_Adventure)
+- **A Little to the Left** (Secret Mode, 2022 / 모바일 2024-11-28): Android 정식 출시 확인(Google Play). 다만 스토리가 거의 없는 순수 정리·정돈 퍼즐로, "일상 감성 서사" 결합도는 낮음. 아늑한 스케치북 톤의 비주얼과 터치 정리 퍼즐 조작감만 보조적으로 참고할 만함. 출처: [Secret Mode 보도](https://wearesecretmode.com/news/a-little-to-the-left-sweeps-onto-android-today), [Google Play](https://play.google.com/store/apps/details?id=com.SecretModeLimited.ALittletotheLeft&hl=en_US)
+
+## 종합 — 일상 감성 계열 공통 패턴 & 적용점
+
+### 공통 패턴
+
+1. **대사 최소화·비언어적 전달**: Florence, Old Man's Journey, Unpacking은 텍스트 대사를 거의/전혀 쓰지 않고 퍼즐·오브젝트·애니메이션만으로 감정을 전달. Coffee Talk·Behind the Frame은 대사가 있지만 핵심 정서는 "행위"(음료 제조/그림 완성)가 담당.
+2. **퍼즐 구조 자체가 감정의 은유**: Florence(조각 수=관계의 편안함), Behind the Frame(퍼즐 완성=기억 회복)처럼, 퍼즐 난이도·완성 상태가 곧 감정 상태를 상징.
+3. **제한된 팔레트로 정서를 압축**: 흑백(TOEM), 갈색 계열(Coffee Talk), 감정별 팔레트 전환(Florence) 등 "색을 줄이는 것"이 오히려 정서 전달을 명확하게 함.
+4. **손그림/수채화/파스텔의 아날로그 질감**: 디지털적으로 매끈한 대신 종이·붓 질감을 남기는 비주얼(Old Man's Journey, Behind the Frame, TOEM의 팝업북 느낌)이 공통적.
+5. **옴니버스식 챕터 구조**: 거대한 서사 대신 "일상의 한 챕터/하루/한 장면"을 쌓아가는 구조(Unpacking의 연도별 이사, TOEM의 마을별 에피소드, Florence의 챕터) — beat-puzzle-rpg의 "하루 속 순간들" 구성과 정확히 일치.
+6. **캐주얼~미드코어 조작 + 짧은 세션**: 드래그/탭 위주 조작과 짧은 총 플레이타임(Florence 약 30분 등)이 많아 모바일 세션에 적합.
+
+### beat-puzzle-rpg 적용점
+
+1. **퍼즐 난이도를 감정 상태에 직접 매핑** (Florence): 설렘 장면=피스 수 적고 여유로운 배치, 피로 장면=복잡하고 조밀한 배치, 안도 장면=클리어 후 피스가 자연스럽게 정렬되는 연출을 스테이지별로 설계.
+2. **대사 없이 배경 소품·컬러만으로 장소를 암시** (Unpacking, Old Man's Journey): 각 스테이지(출근길/회의실/지하철/밤)를 텍스트 설명 없이 색 팔레트+소품 실루엣만으로 구분.
+3. **팔레트 제한 전략** (TOEM, Coffee Talk): 스테이지별로 2~3색 팔레트만 허용해 미니멀리즘(Thumper 원칙, 위 종합 3번)과 감정 표현을 동시에 달성 — 예: 출근길=차갑고 탁한 블루그레이, 밤=따뜻한 브라운/오렌지.
+4. **"퍼즐 완성=감정 회복" 메타포를 명문화** (Behind the Frame, Florence): 콤보/정확도 판정 성공 시 화면이 정돈되거나 색이 채워지는 연출로 "정리됐다"는 감각을 시각적으로 직접 드러낼 것.
+5. **옴니버스식 챕터 라벨링** (Unpacking, TOEM): 스테이지를 "레벨 1, 2, 3" 대신 "출근길", "회의실"처럼 하루의 장면 이름으로 라벨링하고, 각 장면 클리어를 짧은 무언극 컷씬(대사 없이 10~20초)으로 마무리.
+6. **모바일 네이티브 조작 우선** (Old Man's Journey, Unpacking): 드래그/탭 기반의 단순 조작을 유지하고, 판정은 손끝의 정밀도가 아니라 타이밍/리듬에 두는 기존 설계를 재확인.
+7. **참고 배제 사례를 명확히 구분** (A Short Hike, Chicory, Alba): 무드는 좋지만 Android 미출시거나 톤이 무거운 경우, `01-concept.md`의 아트 레퍼런스 표에도 "무드 레퍼런스 한정, 모바일 미출시" 등의 단서를 달아 혼동을 방지할 것.
+
 ## 시장 맥락
 
 - 모바일에서는 "퍼즐+RPG" 하이브리드(예: 퍼즐앤드래곤 계열 — 매치 퍼즐로 전투하고 캐릭터를 성장시키는 구조)가 이미 검증된 성공 공식으로 자리잡았지만, 여기에 "리듬" 축까지 더한 3중 하이브리드 사례는 검색 범위 내에서 뚜렷한 선례를 찾지 못함 → beat-puzzle-rpg의 장르 융합 자체가 차별점이 될 수 있음
@@ -117,6 +217,33 @@
 - [Patapon - Wikipedia](https://en.wikipedia.org/wiki/Patapon)
 - [Review: Patapon 2 - Push Square](https://www.pushsquare.com/reviews/psp/patapon_2)
 - [Hybrid-Puzzle Games: Blending Brains With Business](https://medium.com/loopix-lab/hybrid-puzzle-games-blending-brains-with-business-cd1f4e1daca5)
+- [Florence (video game) - Wikipedia](https://en.wikipedia.org/wiki/Florence_(video_game))
+- [Review: Florence – Destructoid](https://www.destructoid.com/reviews/review-florence/)
+- [Florence - App Store](https://apps.apple.com/us/app/florence/id1297430468)
+- [Old Man's Journey - Wikipedia](https://en.wikipedia.org/wiki/Old_Man%27s_Journey)
+- [Old Man's Journey 공식 사이트](http://www.oldmansjourney.com/)
+- [Old Man's Journey - Google Play](https://play.google.com/store/apps/details?id=es.brokenrul.oldmansjourney&hl=en_IN)
+- [Unpacking (video game) - Wikipedia](https://en.wikipedia.org/wiki/Unpacking_(video_game))
+- [Unpacking 모바일 출시 - Engadget](https://www.engadget.com/zen-moving-game-unpacking-comes-to-android-and-ios-on-august-24th-214513079.html)
+- [Unpacking 모바일 - TouchArcade](https://toucharcade.com/2023/08/01/unpacking-iphone-ipad-android-release-date/)
+- [Unpacking - Pocket Gamer](https://www.pocketgamer.com/unpacking/out-now/)
+- [Coffee Talk (video game) - Wikipedia](https://en.wikipedia.org/wiki/Coffee_Talk_(video_game))
+- [Coffee Talk 모바일 - DroidGamers](https://www.droidgamers.com/news/coffee-talk-episode-1/)
+- [Coffee Talk 모바일 출시 - Prism News](https://www.prismnews.com/hobbies/mobile-gaming/coffee-talk-arrives-on-ios-and-android-bringing-cozy-caf)
+- [TOEM - Wikipedia](https://en.wikipedia.org/wiki/TOEM)
+- [TOEM - Google Play](https://play.google.com/store/apps/details?id=com.snapbreak.toem)
+- [TOEM 모바일 출시 - Games Press](https://www.gamespress.com/TOEM-A-Photo-Adventure-Now-Available-on-iOS-Android)
+- [TOEM 리뷰 - Existential Magazine](https://www.existentialmagazine.net/entertainment/review-toem)
+- [Behind the Frame: The Finest Scenery - Wikipedia](https://en.wikipedia.org/wiki/Behind_the_Frame:_The_Finest_Scenery)
+- [Silver Lining Studio 공식 사이트](https://silverliningstudio.co/Behindtheframe/)
+- [Crunchyroll: Behind the Frame - Google Play](https://play.google.com/store/apps/details?id=com.crunchyroll.gv.btf&hl=en_US)
+- [Behind the Frame - NYX Game Awards](https://nyxgameawards.com/winner-info.php?id=389)
+- [A Short Hike - Wikipedia](https://en.wikipedia.org/wiki/A_Short_Hike)
+- [Chicory: A Colorful Tale - Wikipedia](https://en.wikipedia.org/wiki/Chicory:_A_Colorful_Tale)
+- [Alba: A Wildlife Adventure - Wikipedia](https://en.wikipedia.org/wiki/Alba:_A_Wildlife_Adventure)
+- [Alba Android 미출시 관련 - Android Authority](https://www.androidauthority.com/ustwo-alba-a-wildlife-adventure-1139629/)
+- [A Little to the Left Android 출시 - Secret Mode](https://wearesecretmode.com/news/a-little-to-the-left-sweeps-onto-android-today)
+- [A Little to the Left - Google Play](https://play.google.com/store/apps/details?id=com.SecretModeLimited.ALittletotheLeft&hl=en_US)
 
 ## 개정 이력
 
@@ -124,3 +251,4 @@
 | --- | --- | --- |
 | v0.1 | 2026-08-10 | 최초 작성 — Lumines/Tetris Effect/Thumper/Crypt of the NecroDancer 리서치 |
 | v0.2 | 2026-08-10 | 유사 게임 목록 요약표 추가, QQQbeats!!!/Muse Dash/Cadence of Hyrule/Theatrhythm Final Fantasy/Patapon 리서치 및 적용점 보강 |
+| v0.3 | 2026-08-11 | 테마 전환(현대 사회·일상적 감성) 대응 — "일상 감성 × 현대 사회 계열" 섹션 추가. Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 리서치, A Short Hike·Chicory·Alba 등 Android 미출시/톤 부적합 사례 확인 및 배제, 공통 패턴·적용점 보강 |
