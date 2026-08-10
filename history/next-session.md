@@ -10,7 +10,8 @@
 
 - `library/게임기획교육자료(1)` 강의 노트를 근거로 조사해서 컨셉 기획서(01-concept.md) 표준 목차를 정리하고 규칙화함
 - `templates/game-design/README.md`(제작 규칙 6번 신설) + `01-concept.md` 템플릿에 새 목차 반영: 핵심 컨텐츠/파생 컨텐츠, 핵심 시스템(개요), 경쟁작·차별점(포지셔닝) 섹션 추가
-- `beat-puzzle-rpg/01-concept.md` v1.0 → v1.1: 새 목차에 맞춰 세 섹션을 `references.md` 내용 기반으로 채움 (references.md에서 찾은 차별점을 이 작업으로 이미 반영 완료)
+- `beat-puzzle-rpg/01-concept.md` v1.0 → v1.1: 새 목차에 맞춰 세 섹션을 `references.md` 내용 기반으로 채움
+- `beat-puzzle-rpg/01-concept.md` v1.1 → v1.2: 섹션별 내용 검수·보완 — 기획 배경을 목적/대상/핵심 경험 3요소 구조로 강화. **이 문서는 이제 표준 목차 필수/선택 항목이 모두 채워진 상태.**
 
 ## 다음에 이어서 할 일
 
