@@ -1,7 +1,7 @@
 # 레퍼런스 리서치
 
 - **작성일**: 2026-08-10
-- **버전**: v0.3.1
+- **버전**: v0.4.0
 - **연관 문서**: [01-concept.md](./01-concept.md)
 - **참고**: 여기 정리한 게임들은 직접 플레이가 아닌 웹 리서치 기반 자료입니다. 직접 플레이한 타 게임 리뷰는 [`library/타게임리뷰분석/`](../../../library/타게임리뷰분석/)에 별도로 기록합니다.
 
@@ -197,6 +197,48 @@
 6. **성장이 실제 공략에 영향을 주게 할 것** (Theatrhythm Final Fantasy 반면교사): 성장 스탯이 코어 루프의 난이도 대응에 실질적 영향을 주지 못하면 RPG 요소가 장식으로 전락 — beat-puzzle-rpg는 스탯이 실제 다음 스테이지 난이도(BPM/패턴 복잡도) 대응력에 반영되도록 설계
 7. **콤보 연속 성공 시 피버 타임** (Patapon): 일정 콤보 이상 유지 시 짧게 성장 재화 획득량을 배로 늘리는 피버 구간 도입 검토
 
+## 시스템 구현 레퍼런스 (2차 기획서용)
+
+`02-system-content.md` 작성을 위해 판정 구간·오디오 레이턴시·콤보 배율·퍼즐 난이도·퍼즐RPG 성장 구조를 웹 리서치한 결과. 확인 안 된 수치는 "추정"으로 표시.
+
+### 리듬 판정(Timing Window)
+
+- **StepMania**(Judge 4 기준): Marvelous(최상급) ±22.5ms, Perfect ±45ms, Great ±90ms — 등급이 올라갈수록 허용 오차가 2배씩 벌어지는 구조.
+- **osu!mania**: Perfect/Great/Good/OK/Meh/Miss 6단계, 허용 오차는 비트맵의 難度(Overall Difficulty, OD) 값에 따라 가변적.
+- **StepManiaX**: PERFECT!!/PERFECT/EARLY/LATE/MISS 5단계 — "빠름/늦음"을 등급명에 노출해 유저가 스스로 보정하게 유도.
+- **적용점**: beat-puzzle-rpg도 3~4단계 판정(예: Perfect/Good/Miss)을 두고, 최상급 판정은 ±20~30ms 수준의 좁은 창으로 시작해 플레이테스트로 조정하는 것을 권장(추정치, 확정 아님). BPM이 오르면 노트 간격이 좁아지므로 판정 구간을 BPM에 비례해 자동 축소할지 고정할지는 밸런스 문서(`03-detail/balance.md`)에서 결정.
+- 출처: [Timing windows in osu! - ppy forum](https://osu.ppy.sh/community/forums/topics/54535), [osu!mania judgement system - wiki](https://osu.ppy.sh/wiki/en/Gameplay/Judgement/osu!mania), [StepManiaX - Wikipedia](https://en.wikipedia.org/wiki/StepManiaX)
+
+### 모바일 오디오 레이턴시 / 캘리브레이션
+
+- Android 기기의 오디오 출력 지연은 기기마다 **0.01초~0.2초(10~200ms)** 로 편차가 커서, 판정 구간이 수십 ms 단위인 리듬 게임에서는 무시할 수 없는 오차임.
+- Unity의 `AudioSettings.dspTime`은 게임 프레임 시간(Time.time)이 아닌 오디오 시스템 기준 시간을 반환하므로, `AudioSource.PlayScheduled`와 함께 써서 배경 음악을 정확한 DSP 시각에 예약 재생하는 방식이 표준적으로 권장됨. 단, dspTime도 이산적(discrete) 단계로 갱신되므로 완벽히 연속적이지 않다는 점을 캘리브레이션 설계 시 감안해야 함.
+- Unity 기본 오디오 파이프라인은 Android에서 지연이 크다는 지적이 많아, DSP 버퍼 크기를 "Best latency"로, 오디오 클립 Load Type을 "Decompress On Load"로 설정하는 것이 최소 대응책이며, 근본적으로는 Android 네이티브 오디오 사용이 더 낫다는 의견도 있음(확인 필요 — 이 프로젝트 규모에서 네이티브 오디오까지 도입할지는 추후 판단).
+- **적용점**: 01-concept.md 리스크 섹션에 이미 명시된 "최초 실행 시 기기별 오디오/터치 지연 자동 보정 캘리브레이션"이 리서치로 뒷받침됨. 구현은 `AudioSettings.dspTime` + `PlayScheduled` 조합을 기본으로 하고, 캘리브레이션 단계에서 유저에게 일정 박자를 여러 번 탭하게 해 평균 오차를 측정하는 방식을 권장.
+- 출처: [Rhythm game with Unity3D: achieve latency free sync - Medium](https://medium.com/@thibautdumont/rhythm-game-with-unity3d-achieve-latency-free-sync-android-and-other-platforms-c05fa8e2718b), [Noticeable Audio Delay on Android - Unity Discussions](https://discussions.unity.com/t/noticeable-audio-delay-on-android-how-to-reduce-latency/1620003), [Bonus: Synchronizing with dspTime - Native Audio](https://exceed7.com/native-audio/rhythm-game-crash-course/dsp-sync.html), [Rhythm Quest Devlog 10 - latency calibration](https://ddrkirbyisq.medium.com/rhythm-quest-devlog-10-latency-calibration-fb6f1a56395c)
+
+### 콤보 배율 / 피버 타임
+
+- 전통적인 리듬 게임 콤보 배율은 **1x → 2x → 4x → 8x**처럼 일정 콤보 수마다 배로 뛰는 계단식 구조가 흔함.
+- 모바일 퍼즐×리듬 하이브리드 사례(RhythmMatch)는 "모멘텀" 개념으로 **5단계 배율(1x~5x, 각 단계에 "Soundcheck"~"Encore" 같은 이름 부여)** 을 씀 — 등급에 이름을 붙여 성장감을 연출하는 방식.
+- "풀 콤보(Full Combo)"는 노래 끝까지 최고 배율을 유지한 상태를 뜻하며, 많은 리듬 게임에서 별도의 성취/보상으로 취급됨.
+- **적용점**: beat-puzzle-rpg의 콤보 배율은 계단식(예: 5/10/20/40콤보마다 배율 상승)으로 설계하고, 각 배율 구간에 테마(하루 속 순간)에 어울리는 이름을 붙이는 것을 검토. Patapon류 피버 타임은 "일정 콤보 이상 유지 시 짧은 시간 동안 성장 재화 획득량 2배" 같은 형태로 콤보 배율과는 별도 레이어로 설계.
+- 출처: [How To Make a Rhythm Game #3 - Score and Multipliers - YouTube](https://www.youtube.com/watch?v=dV9rdTlMHxs), [RhythmMatch Demo - itch.io](https://zottware.itch.io/rhythmmatch), [Rhythm Game Scoring Systems Explained](https://rhythm-games.com/guides/rhythm-game-scoring-system-explained)
+
+### 퍼즐 보드 / 난이도 파라미터
+
+- **테트리스 7-bag 랜덤화**: 7종 피스를 한 "가방"에 담아 무작위로 섞어 하나씩 꺼내고, 가방이 비면 다시 채우는 방식. 특정 피스가 12개 이상 연속으로 안 나오는 일이 없도록 보장하는 "공정한 랜덤"의 표준 기법.
+- 난이도를 올리는 파라미터로 일반적으로 쓰이는 것: 낙하/진행 속도, 피스(패턴) 종류 수, 보드 크기, 방해 요소 추가. 이번 리서치에서는 장르 전반의 일반 원칙만 확인했고, beat-puzzle-rpg처럼 "배치 타이밍=판정"인 하이브리드 장르의 구체적 난이도 곡선 수치 사례는 찾지 못함(확인 필요 — 프로토타입 플레이테스트로 직접 도출 필요).
+- **적용점**: 피스 생성에 7-bag류의 공정한 랜덤화를 적용해 특정 패턴이 몰리거나 안 나오는 상황을 방지. 난이도는 BPM(속도)과 패턴 복잡도(피스 종류/방해 요소) 두 축으로 올리되, 01-concept.md 리스크 섹션에 이미 정한 대로 "퍼즐 축을 기준으로 먼저 밸런싱" 원칙을 유지.
+- 출처: [How Tetris Randomizers Work - Dinogame GG](https://dinogame.gg/blog/how-tetris-randomizers-work/), [Random Generator - TetrisWiki](https://tetris.wiki/Random_Generator)
+
+### 퍼즐×RPG 성장 구조
+
+- **퍼즐앤드래곤(Puzzle & Dragons)**: 팀 전체의 HP/RCV(회복)/ATK 스탯이 소속 몬스터 스탯의 합 + 리더 스킬 배율로 계산됨. 매치한 오브 색깔에 대응하는 스탯이 대미지/회복량에 직접 반영되는 구조 — "무엇을 매치했는가"가 "어떤 스탯이 발동하는가"와 1:1로 연결됨.
+- 액티브 스킬은 일정 턴(쿨타임) 경과 후 사용 가능한 구조로, 스탯 성장과는 별도 레이어로 존재.
+- **적용점**: beat-puzzle-rpg의 캐릭터 스탯도 "무엇을 성장시키면 무엇이 쉬워지는가"를 1:1에 가깝게 연결하는 것을 권장 — 예: 정확도 스탯→판정 구간 확장, 콤보 유지력 스탯→콤보 배율 감쇠 완화, 속도 대응 스탯→고BPM 스테이지에서의 노트 표시 시간 증가 등(구체적 대응 관계는 `02-system-content.md`에서 확정). 이는 01-concept.md에 이미 명시한 "성장이 실제 다음 스테이지 난이도 대응력에 영향을 줘야 한다"는 원칙(Theatrhythm 반면교사)을 구체적인 스탯 설계로 연결하는 근거가 됨.
+- 출처: [Game Mechanics - Puzzle & Dragons Wiki](https://pad.fandom.com/wiki/Game_Mechanics), [What Makes a Good Leader in Puzzle and Dragons - Mantastic](https://mantasticpad.com/2017/01/17/what-makes-a-good-leader-in-puzzle-and-dragons/)
+
 ## 참고 링크
 
 - [Lumines Arise Review - Checkpoint](https://checkpointgaming.net/reviews/2025/11/lumines-arise-review-mesmerising-euphoria/)
@@ -244,6 +286,20 @@
 - [Alba Android 미출시 관련 - Android Authority](https://www.androidauthority.com/ustwo-alba-a-wildlife-adventure-1139629/)
 - [A Little to the Left Android 출시 - Secret Mode](https://wearesecretmode.com/news/a-little-to-the-left-sweeps-onto-android-today)
 - [A Little to the Left - Google Play](https://play.google.com/store/apps/details?id=com.SecretModeLimited.ALittletotheLeft&hl=en_US)
+- [Timing windows in osu! - ppy forum](https://osu.ppy.sh/community/forums/topics/54535)
+- [osu!mania judgement system - wiki](https://osu.ppy.sh/wiki/en/Gameplay/Judgement/osu!mania)
+- [StepManiaX - Wikipedia](https://en.wikipedia.org/wiki/StepManiaX)
+- [Rhythm game with Unity3D: achieve latency free sync - Medium](https://medium.com/@thibautdumont/rhythm-game-with-unity3d-achieve-latency-free-sync-android-and-other-platforms-c05fa8e2718b)
+- [Noticeable Audio Delay on Android - Unity Discussions](https://discussions.unity.com/t/noticeable-audio-delay-on-android-how-to-reduce-latency/1620003)
+- [Bonus: Synchronizing with dspTime - Native Audio](https://exceed7.com/native-audio/rhythm-game-crash-course/dsp-sync.html)
+- [Rhythm Quest Devlog 10 - latency calibration](https://ddrkirbyisq.medium.com/rhythm-quest-devlog-10-latency-calibration-fb6f1a56395c)
+- [How To Make a Rhythm Game #3 - Score and Multipliers - YouTube](https://www.youtube.com/watch?v=dV9rdTlMHxs)
+- [RhythmMatch Demo - itch.io](https://zottware.itch.io/rhythmmatch)
+- [Rhythm Game Scoring Systems Explained](https://rhythm-games.com/guides/rhythm-game-scoring-system-explained)
+- [How Tetris Randomizers Work - Dinogame GG](https://dinogame.gg/blog/how-tetris-randomizers-work/)
+- [Random Generator - TetrisWiki](https://tetris.wiki/Random_Generator)
+- [Game Mechanics - Puzzle & Dragons Wiki](https://pad.fandom.com/wiki/Game_Mechanics)
+- [What Makes a Good Leader in Puzzle and Dragons - Mantastic](https://mantasticpad.com/2017/01/17/what-makes-a-good-leader-in-puzzle-and-dragons/)
 
 ## 개정 이력
 
@@ -253,3 +309,4 @@
 | v0.2.0 | 2026-08-10 | 유사 게임 목록 요약표 추가, QQQbeats!!!/Muse Dash/Cadence of Hyrule/Theatrhythm Final Fantasy/Patapon 리서치 및 적용점 보강 |
 | v0.3.0 | 2026-08-11 | 테마 전환(현대 사회·일상적 감성) 대응 — "일상 감성 × 현대 사회 계열" 섹션 추가. Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 리서치, A Short Hike·Chicory·Alba 등 Android 미출시/톤 부적합 사례 확인 및 배제, 공통 패턴·적용점 보강 |
 | v0.3.1 | 2026-08-11 | 버전 표기를 MAJOR.MINOR.PATCH 3단계 형식으로 전환 (과거 버전 표기 전체 소급 변환, 내용 변경 없음) |
+| v0.4.0 | 2026-08-11 | "시스템 구현 레퍼런스" 섹션 신설 — 리듬 판정 구간(ms), 모바일 오디오 레이턴시/캘리브레이션, 콤보 배율/피버 타임, 퍼즐 보드 난이도 파라미터, 퍼즐×RPG 성장 구조 리서치. `02-system-content.md` 작성 근거 |
