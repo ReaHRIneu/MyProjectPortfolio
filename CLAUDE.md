@@ -50,6 +50,7 @@
 projects/           # 프로젝트 포트폴리오 (완료/진행 중 프로젝트 소개)
   unity/             # Unity/게임 개발 프로젝트 문서
 notes/              # 일반 프로그래밍 노트 / TIL
+게임공략/            # 게임별 공략/팁 정리
 personal/           # 기타 개인 노트
 library/            # Notion 등 외부에서 가져온 참고자료 (평판 파일 나열)
 templates/          # 새 문서 작성용 템플릿 (project-note.md, til.md, game-design/)
