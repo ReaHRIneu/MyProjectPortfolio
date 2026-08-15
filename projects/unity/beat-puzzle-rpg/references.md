@@ -1,7 +1,7 @@
 # 레퍼런스 리서치
 
 - **작성일**: 2026-08-10
-- **버전**: v0.4.0
+- **버전**: v0.5.0
 - **연관 문서**: [01-concept.md](./01-concept.md)
 - **참고**: 여기 정리한 게임들은 직접 플레이가 아닌 웹 리서치 기반 자료입니다. 직접 플레이한 타 게임 리뷰는 [`library/타게임리뷰분석/`](../../../library/타게임리뷰분석/)에 별도로 기록합니다.
 
@@ -182,6 +182,53 @@
 6. **모바일 네이티브 조작 우선** (Old Man's Journey, Unpacking): 드래그/탭 기반의 단순 조작을 유지하고, 판정은 손끝의 정밀도가 아니라 타이밍/리듬에 두는 기존 설계를 재확인.
 7. **참고 배제 사례를 명확히 구분** (A Short Hike, Chicory, Alba): 무드는 좋지만 Android 미출시거나 톤이 무거운 경우, `01-concept.md`의 아트 레퍼런스 표에도 "무드 레퍼런스 한정, 모바일 미출시" 등의 단서를 달아 혼동을 방지할 것.
 
+## 전투 연출 계열 (감정 의인화 전투 / 도트 스타일 전투 연출)
+
+> "전투 연출"(퍼즐 판정 정확도를 캐릭터 전투 우위로 즉시 시각화) 컨셉 도입 후, ① 현대+힐링 톤에서 "전투"를 어떻게 다루는지(세계관/컨셉 참고)와 ② 도트 그래픽에서 전투 연출을 어떻게 표현하는지(비주얼 실행 참고)를 별도로 조사했다. 두 조건을 동시에 만족하는 사례는 리서치 범위에서 확인되지 않아, 각각 다른 게임에서 필요한 부분만 선별 참고한다.
+
+### 컨셉 참고 — 감정 의인화 전투
+
+#### OMORI (OMOCAT, 2020)
+
+- **배경/설정**: 현실 세계와, 주인공이 트라우마를 회피하기 위해 만든 꿈속 세계 "White Space"·"헤드스페이스"를 오가는 구조.
+- **전투 시스템**: 전투가 감정 상태(Happy/Sad/Angry 등) 기반으로 설계됨 — 각 감정은 가위바위보처럼 서로 상성이 있고, 캐릭터의 현재 감정이 상대 감정에 유리한지에 따라 대미지가 오르내림. "감정 상태가 곧 전투 우위/열세로 직결된다"는 구조가 beat-puzzle-rpg의 "판정 정확도→전투 연출"과 개념적으로 근접.
+- **비주얼**: 오버월드는 도트 그래픽이지만 **전투 화면 자체는 손그림 일러스트로 전환**됨 — 즉 "도트 스타일 전투"의 사례로는 쓸 수 없고, 어디까지나 감정-전투 연동 메커니즘만 참고.
+- **톤 주의**: 우울·트라우마·자살 등을 정면으로 다루는 심리 호러에 가까워 이번 기획의 "잔잔한 힐링" 톤과는 거리가 있음 — 메커니즘만 선별 참고, 톤은 참고하지 않음.
+- **모바일**: 공식 출시는 PC/Switch/PS4/Xbox뿐이며 Android 공식 출시 없음. 검색되는 "OMORI Mobile" APK는 비공식 포크로 추정되어 인용하지 않음.
+- **출처**: [OMORI (GAME) - OMORI Wiki](https://omori.fandom.com/wiki/OMORI_(GAME)) · [EMOTIONS - OMORI Wiki](https://omori.fandom.com/wiki/EMOTIONS) · [Circuits & Synapses Gaiden: Exploring Mental Health Through OMORI's Emotion-Driven Battle System](https://technotherapies.substack.com/p/circuits-and-synapses-gaiden-exploring) · [OMORI (2020) 리뷰 - Professional Moron](https://professionalmoron.com/2022/12/04/omori-2020-rpg/)
+
+#### Sea of Solitude (Jo-Mei Games, 2019)
+
+- **배경/설정**: 극심한 외로움에 시달리는 여성 Kay가 주인공. 그녀의 부정적 감정(외로움·분노·무력감)이 그대로 밖으로 표출되어 거대한 괴물이 된다.
+- **전투/대면 구조**: 이 괴물들은 Kay를 파괴하려 하면서 동시에 돕고자 하는 존재로 그려지며, Kay는 이들과 맞서 싸우기보다 이해하고 진정시키는 방식으로 여정을 진행함 — "부정적 감정=괴물"이라는 의인화 자체는 beat-puzzle-rpg의 "전투 상대=감정적 부담의 형상화"와 가장 직접적으로 대응하는 선례.
+- **톤**: 힐링보다는 애잔하고 melancholic한 정서에 가까움 — beat-puzzle-rpg는 이보다 가볍고 캐주얼한 톤을 유지해야 함.
+- **모바일**: PC/콘솔(PS4, Xbox One, Switch)에만 출시, Android 미출시.
+- **출처**: [Sea of Solitude - Wikipedia](https://en.wikipedia.org/wiki/Sea_of_Solitude) · [Sea of Solitude is the latest high-profile video game to artfully explore mental health, trauma and isolation - CBC](https://www.cbc.ca/lite/story/1.5208423)
+
+### 도트 스타일 참고 — 픽셀 아트 전투 연출 실행
+
+#### Cassette Beasts (Bytten Studio, 2023 / 모바일 2025-01-15)
+
+- **비주얼 구조**: 평상시에는 채도 높은 3D 오버월드를 돌아다니다가, 전투에 진입하면 화면이 2D 도트 그래픽으로 전환됨 — "평상시(3D/저강도) ↔ 전투(도트/고강도)"의 화면 전환 자체가 연출적 강조 장치로 기능. 몬스터 변신 애니메이션의 타격감이 좋다는 평.
+- **설정**: 여러 시공간이 뒤섞인 이계(異界) "New Wirral"이 배경이라 컨셉(현대+힐링)은 참고하지 않고, 오직 "도트 그래픽으로 전투 순간을 어떻게 부각시키는가"만 참고.
+- **모바일**: Android 공식 출시(2025-01-15, 유료 $5.99).
+- **출처**: [Cassette Beasts - Wikipedia](https://en.wikipedia.org/wiki/Cassette_Beasts) · [Cassette Beasts Review - RPGFan](https://www.rpgfan.com/review/cassette-beasts/) · [Transform into Monsters as Cassette Beasts Lands on Android! - DroidGamers](https://www.droidgamers.com/news/cassette-beasts/) · [Cassette Beasts - Mobile Version FAQ (공식)](https://www.cassettebeasts.com/2025/01/15/cassette-beasts-mobile-version-faq/)
+
+#### Octopath Traveler: Champions of the Continent (Square Enix / Acquire, 2022)
+
+- **비주얼 구조**: "HD-2D" — 도트로 그려진 캐릭터가 3D 배경·조명 위에서 움직이는 방식. 평상시 필드 화면 대비, 전투에서 스킬을 쓸 때 화려한 3D 이펙트가 도트 캐릭터 위에 겹쳐지며 시각적으로 고조됨 — beat-puzzle-rpg의 "평소엔 미니멀, 피버 타임엔 전투 연출로 고조"라는 대비 구조에 참고할 만한 상용 실행 사례.
+- **설정**: 하이 판타지 세계관이라 컨셉은 참고하지 않고 이펙트·연출 기법만 참고.
+- **모바일**: Android/iOS 공식 출시(Square Enix, 2022-07-27 글로벌 서비스).
+- **출처**: [Octopath Traveler: Champions of the Continent - Wikipedia](https://en.wikipedia.org/wiki/Octopath_Traveler:_Champions_of_the_Continent) · ["Octopath Traveler: Champions of the Continent" 모바일 출시 - TouchArcade](https://toucharcade.com/2022/07/26/octopath-traveler-cotc-download-available-now-iphone-android-champions-of-the-continent-square-enix/) · [공식 발표 - Square Enix Press Hub](https://press.na.square-enix.com/OCTOPATH-TRAVELER-CHAMPIONS-OF-THE-CONTINENT-LAUNCHES-ON-MOBILE-DEVICE)
+
+#### 검토했으나 배제한 후보
+
+- **CrossCode** (Radical Fish Games): 16비트풍 도트 그래픽의 실시간 액션 전투로 스타일 자체는 적합하나, **공식 Android 출시가 확인되지 않음** — 검색되는 "CrossCode Mobile" APK는 전부 비공식 포크로 추정되어 인용하지 않음 (기존 A Short Hike/Alba 배제 사례와 동일한 기준 적용).
+
+### 시사점
+
+"현대 사회 + 힐링 톤"과 "전투(액션) 시스템"을 동시에 만족하는 사례는 리서치 범위에서 확인되지 않았다 — 이는 경쟁작 분석 섹션의 결론(퍼즐×리듬×RPG 3중 결합 공백)과 같은 종류의 공백으로, beat-puzzle-rpg의 "전투 연출"이 채우는 지점이 명확함을 재확인시켜준다. 실제 적용 시에는 OMORI·Sea of Solitude에서 "감정=전투 원인/상성"이라는 개념만, Cassette Beasts·Octopath Traveler: Champions of the Continent에서 "평상시 화면과 대비되는 도트 전투 연출 전환 기법"만 가져와 서로 다른 게임의 요소를 조합해야 한다.
+
 ## 시장 맥락
 
 - 모바일에서는 "퍼즐+RPG" 하이브리드(예: 퍼즐앤드래곤 계열 — 매치 퍼즐로 전투하고 캐릭터를 성장시키는 구조)가 이미 검증된 성공 공식으로 자리잡았지만, 여기에 "리듬" 축까지 더한 3중 하이브리드 사례는 검색 범위 내에서 뚜렷한 선례를 찾지 못함 → beat-puzzle-rpg의 장르 융합 자체가 차별점이 될 수 있음
@@ -300,6 +347,19 @@
 - [Random Generator - TetrisWiki](https://tetris.wiki/Random_Generator)
 - [Game Mechanics - Puzzle & Dragons Wiki](https://pad.fandom.com/wiki/Game_Mechanics)
 - [What Makes a Good Leader in Puzzle and Dragons - Mantastic](https://mantasticpad.com/2017/01/17/what-makes-a-good-leader-in-puzzle-and-dragons/)
+- [OMORI (GAME) - OMORI Wiki](https://omori.fandom.com/wiki/OMORI_(GAME))
+- [EMOTIONS - OMORI Wiki](https://omori.fandom.com/wiki/EMOTIONS)
+- [Circuits & Synapses Gaiden: Exploring Mental Health Through OMORI's Emotion-Driven Battle System](https://technotherapies.substack.com/p/circuits-and-synapses-gaiden-exploring)
+- [OMORI (2020) 리뷰 - Professional Moron](https://professionalmoron.com/2022/12/04/omori-2020-rpg/)
+- [Sea of Solitude - Wikipedia](https://en.wikipedia.org/wiki/Sea_of_Solitude)
+- [Sea of Solitude is the latest high-profile video game to artfully explore mental health, trauma and isolation - CBC](https://www.cbc.ca/lite/story/1.5208423)
+- [Cassette Beasts - Wikipedia](https://en.wikipedia.org/wiki/Cassette_Beasts)
+- [Cassette Beasts Review - RPGFan](https://www.rpgfan.com/review/cassette-beasts/)
+- [Transform into Monsters as Cassette Beasts Lands on Android! - DroidGamers](https://www.droidgamers.com/news/cassette-beasts/)
+- [Cassette Beasts - Mobile Version FAQ (공식)](https://www.cassettebeasts.com/2025/01/15/cassette-beasts-mobile-version-faq/)
+- [Octopath Traveler: Champions of the Continent - Wikipedia](https://en.wikipedia.org/wiki/Octopath_Traveler:_Champions_of_the_Continent)
+- ["Octopath Traveler: Champions of the Continent" 모바일 출시 - TouchArcade](https://toucharcade.com/2022/07/26/octopath-traveler-cotc-download-available-now-iphone-android-champions-of-the-continent-square-enix/)
+- [공식 발표 - Square Enix Press Hub](https://press.na.square-enix.com/OCTOPATH-TRAVELER-CHAMPIONS-OF-THE-CONTINENT-LAUNCHES-ON-MOBILE-DEVICE)
 
 ## 개정 이력
 
@@ -310,3 +370,4 @@
 | v0.3.0 | 2026-08-11 | 테마 전환(현대 사회·일상적 감성) 대응 — "일상 감성 × 현대 사회 계열" 섹션 추가. Florence/Old Man's Journey/Unpacking/Coffee Talk/TOEM/Behind the Frame 리서치, A Short Hike·Chicory·Alba 등 Android 미출시/톤 부적합 사례 확인 및 배제, 공통 패턴·적용점 보강 |
 | v0.3.1 | 2026-08-11 | 버전 표기를 MAJOR.MINOR.PATCH 3단계 형식으로 전환 (과거 버전 표기 전체 소급 변환, 내용 변경 없음) |
 | v0.4.0 | 2026-08-11 | "시스템 구현 레퍼런스" 섹션 신설 — 리듬 판정 구간(ms), 모바일 오디오 레이턴시/캘리브레이션, 콤보 배율/피버 타임, 퍼즐 보드 난이도 파라미터, 퍼즐×RPG 성장 구조 리서치. `02-system-content.md` 작성 근거 |
+| v0.5.0 | 2026-08-15 | "전투 연출 계열" 섹션 신설 — 컨셉 참고(OMORI, Sea of Solitude: 감정 의인화 전투)와 도트 스타일 참고(Cassette Beasts, Octopath Traveler: Champions of the Continent: 픽셀 아트 전투 연출 실행)를 분리 리서치. `01-concept.md` 아트 스타일 섹션 보강 근거 |
