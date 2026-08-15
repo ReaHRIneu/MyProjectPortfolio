@@ -41,6 +41,7 @@
 
 - 게임 기획서(`projects/unity/*`, `templates/game-design/`): [`templates/game-design/README.md`](./templates/game-design/README.md)의 "제작 규칙"(단계 진행 조건, 버전/개정 이력, 커밋 연동, 새 프로젝트 생성 절차, 파일 생성 규칙)을 따릅니다.
 - 타 게임 리뷰 분석(`library/타게임리뷰분석/`): 해당 폴더 [`README.md`](./library/타게임리뷰분석/README.md)의 작성 규칙(파일명, 메타 정보, 행사별 하위 폴더)을 따릅니다.
+- 게임 공략(`gameinfo/`): 해당 폴더 [`README.md`](./gameinfo/README.md)의 작성 규칙(영문 kebab-case 폴더/파일명, 게임별 하위 폴더, 주제별 파일 분리, 메타 정보)을 따릅니다.
 
 ## 📁 저장소 구조
 
@@ -50,7 +51,7 @@
 projects/           # 프로젝트 포트폴리오 (완료/진행 중 프로젝트 소개)
   unity/             # Unity/게임 개발 프로젝트 문서
 notes/              # 일반 프로그래밍 노트 / TIL
-게임공략/            # 게임별 공략/팁 정리
+gameinfo/           # 게임별 공략/팁 정리
 personal/           # 기타 개인 노트
 library/            # Notion 등 외부에서 가져온 참고자료 (평판 파일 나열)
 templates/          # 새 문서 작성용 템플릿 (project-note.md, til.md, game-design/)
